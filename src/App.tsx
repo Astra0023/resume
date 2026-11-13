@@ -234,14 +234,16 @@ export default function App() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                <a
-                  className="project-link"
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View live site <span aria-hidden="true">↗</span>
-                </a>
+                {project.liveUrl && (
+                  <a
+                    className="project-link"
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View live site <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </article>
             ))}
           </div>
